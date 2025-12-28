@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#2563eb">
   <meta name="description" content="Real-time sign language translation with AI">
   <title>SignBridge - Sign Language Translation</title>
-  <link rel="manifest" href="/manifest.json">
-  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
   
   <!-- MediaPipe CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
@@ -20,12 +20,12 @@
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 </head>
 <body>
-  <div id="root"></div>
+  
   <script>
     // Register service worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('./service-worker.js')
           .then(reg => console.log('Service Worker registered'))
           .catch(err => console.error('Service Worker registration failed:', err));
       });
